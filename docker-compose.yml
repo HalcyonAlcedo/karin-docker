@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  karin:
+    build:
+      context: .
+    ports:
+      - "7000:7000"
+      - "7001:7001"
+      - "5333:5333"
+    volumes:
+      - ./plugins:/home/karin/plugins
+      - ./plugins:/home/karin/plugins
+  
+  karin-support:
+    image: zyc404/karin-support
+    ports: 
+      - "7005:7005"
