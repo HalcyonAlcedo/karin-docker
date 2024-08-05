@@ -4,6 +4,7 @@ services:
   karin:
     build:
       context: .
+    restart: unless-stopped
     ports:
       - "${KARIN_PORTS_HTTP}:7000"
       - "${KARIN_PORTS_GRPC}:7001"
@@ -16,5 +17,6 @@ services:
   
   karin-support:
     image: ${SUPPORT_IMAGE}
+    restart: unless-stopped
     ports: 
       - "${SUPPORT_PORT}:7005"
