@@ -8,7 +8,7 @@
 首先，克隆项目代码到本地：
 
 ```bash
-git clone https://github.com/HalcyonAlcedo/karin-docker.git
+git clone --recursive https://github.com/HalcyonAlcedo/karin-docker.git
 ```
 
 ### 2. 进入项目目录
@@ -100,6 +100,14 @@ docker-compose up -d
 
 ```bash
 docker-compose down
+```
+
+## 安装插件
+
+与karin安装插件的方法一致，以karin-plugin-basic插件为例，在karin-docker目录下执行：
+
+```bash
+git clone --depth=1 https://github.com/karinjs/karin-plugin-basic.git ./plugins/karin-plugin-basic
 ```
 
 ## 日志
