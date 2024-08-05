@@ -10,6 +10,7 @@ services:
       - "${KARIN_PORTS_MANAGE}:5333"
     volumes:
       - ./plugins:/home/karin/plugins
+      - ./config:/home/karin/config/config
     environment:
       - KARIN_SUPPORT_PORT=${SUPPORT_PORT}
   

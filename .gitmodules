@@ -1,3 +1,6 @@
 [submodule "plugins/karin-plugin-manage"]
 	path = plugins/karin-plugin-manage
 	url = https://github.com/HalcyonAlcedo/karin-plugin-manage.git
+[submodule "plugins/karin-plugin-basic"]
+	path = plugins/karin-plugin-basic
+	url = https://github.com/karinjs/karin-plugin-basic.git
