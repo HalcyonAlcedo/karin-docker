@@ -1,2 +1,5 @@
 config/
 plugins/
+!plugins
+!plugins/karin-plugin-basic
+!plugins/karin-plugin-manage
