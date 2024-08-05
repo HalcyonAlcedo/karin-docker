@@ -16,7 +16,6 @@
 - **docker-compose.yml**: Docker Compose 配置文件。
 - **Dockerfile**: 定义如何构建每个服务的 Docker 镜像。
 - **entrypoint.sh**: 启动脚本，处理启动时的初始化任务（如插件安装）。
-- **server.yaml**: 默认服务配置文件。
 
 ## 启动项目
 

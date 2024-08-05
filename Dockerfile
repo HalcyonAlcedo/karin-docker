@@ -6,7 +6,6 @@ RUN npm install -g pnpm && \
     pnpm i node-karin --no-cache && npx init
 
 COPY entrypoint.sh /usr/local/bin/entrypoint.sh
-COPY server.yaml /home/karin/config/config/server.yaml
 
 RUN chmod +x /usr/local/bin/entrypoint.sh
 

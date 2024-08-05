@@ -5,14 +5,15 @@ services:
     build:
       context: .
     ports:
-      - "7000:7000"
-      - "7001:7001"
-      - "5333:5333"
+      - "${KARIN_PORTS_HTTP}:7000"
+      - "${KARIN_PORTS_GRPC}:7001"
+      - "${KARIN_PORTS_MANAGE}:5333"
     volumes:
       - ./plugins:/home/karin/plugins
-      - ./plugins:/home/karin/plugins
+    environment:
+      - KARIN_SUPPORT_PORT=${SUPPORT_PORT}
   
   karin-support:
-    image: zyc404/karin-support
+    image: ${SUPPORT_IMAGE}
     ports: 
-      - "7005:7005"
+      - "${SUPPORT_PORT}:7005"
