@@ -133,6 +133,7 @@ docker-compose logs karin
 ## 注意事项
 
 如果你无法访问官方docker镜像仓库，你可以修改.env中的镜像SUPPORT_IMAGE为registry.cn-beijing.aliyuncs.com/alcedo/karin-support
+配置中如果你需要访问宿主机ip，你可以使用host.docker.internal特殊host，比如你的onebot部署在ws://127.0.0.1:3001，你可以填写ws://host.docker.internal:3001
 
 ## 贡献
 
