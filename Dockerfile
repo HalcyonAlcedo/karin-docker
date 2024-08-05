@@ -8,4 +8,4 @@ RUN chmod +x /usr/local/bin/entrypoint.sh && \
     npm install -g pnpm && \
     pnpm i node-karin --no-cache && npx init
 
-ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]
+ENTRYPOINT ["bash","/usr/local/bin/entrypoint.sh"]

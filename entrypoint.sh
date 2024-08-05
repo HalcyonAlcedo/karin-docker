@@ -1,7 +1,15 @@
-#!/bin/sh
+#!/bin/bash
+
+set -e
 
 # 获取环境变量中的端口值
 PORT=${KARIN_SUPPORT_PORT}
+
+if [ -z "$PORT" ]; then
+  echo "KARIN_SUPPORT_PORT 环境变量未设置"
+  PORT=7005
+fi
+
 # 配置文件路径
 CONFIG_FILE="/home/karin/config/config/server.yaml"
 DEFCONFIG_FILE="/home/karin/node_modules/node-karin/config/defSet/server.yaml"
