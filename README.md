@@ -122,6 +122,10 @@ docker-compose logs <service_name>
 docker-compose logs karin
 ```
 
+## 注意事项
+
+如果你无法访问官方docker镜像仓库，你可以修改.env中的镜像SUPPORT_IMAGE为registry.cn-beijing.aliyuncs.com/alcedo/karin-support
+
 ## 贡献
 
 欢迎提交问题报告、建议和代码贡献。请遵循项目的贡献指南和代码规范。
