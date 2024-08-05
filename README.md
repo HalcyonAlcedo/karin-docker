@@ -1,6 +1,72 @@
 
 # Karin Docker
 
+## 快速开始
+
+### 1. 克隆项目代码
+
+首先，克隆项目代码到本地：
+
+```bash
+git clone https://github.com/HalcyonAlcedo/karin-docker.git
+```
+
+### 2. 进入项目目录
+
+进入 `karin-docker` 目录：
+
+```bash
+cd karin-docker
+```
+
+### 3. 构建镜像并启动应用
+
+执行以下命令，构建镜像并启动应用：
+
+```bash
+docker-compose up -d
+```
+
+### 4. 访问管理面板
+
+在浏览器中访问以下地址进入karin管理面板：
+
+```
+http://karin.alcedo.top/
+```
+
+### 5. 快速登陆
+
+在服务器地址中输入以下地址后点击“快速登陆”：
+
+```
+http://localhost:5333
+```
+
+### 6. 获取快速登陆令牌
+
+在终端中输入以下命令查看日志，并获取快速登陆令牌：
+
+```bash
+docker-compose logs karin
+```
+
+使用获取的快速登陆令牌登陆系统。
+
+### 7. 修改配置
+
+根据需要在面板中修改配置并保存，然后执行以下命令重启应用：
+
+```bash
+docker-compose restart
+```
+
+## 开始愉快的使用
+
+完成以上步骤后，您即可开始愉快地使用 Karin 系统。如果在使用过程中遇到任何问题，请参阅项目文档或提交问题至项目仓库。
+
+---
+
 ## 项目概述
 
 这是一个用于快速启动 `karin` 项目的 Docker 配置。该项目包含三个主要服务：
