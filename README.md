@@ -137,6 +137,10 @@ docker-compose logs karin
 docker build .
 ```
 
+## 注意事项
+
+如果你需要访问宿主机ip，你可以使用host.docker.internal特殊host，比如你的onebot部署在ws://127.0.0.1:3001，你可以填写ws://host.docker.internal:3001
+
 ## 贡献
 
 欢迎提交问题报告、建议和代码贡献。请遵循项目的贡献指南和代码规范。
