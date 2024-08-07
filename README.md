@@ -27,6 +27,12 @@ cd karin-docker
 docker-compose up -d
 ```
 
+国内使用此命令
+
+```bash
+docker-compose -f docker-compose-cn.yml up -d
+```
+
 ### 4. 访问管理面板
 
 在浏览器中访问以下地址进入karin管理面板：
@@ -69,19 +75,12 @@ docker-compose restart
 
 ## 项目概述
 
-这是一个用于快速启动 `karin` 项目的 Docker 配置。该项目包含三个主要服务：
+这是一个用于快速启动 `karin` 项目的 Docker 配置。该项目包含两个主要服务：
 
 - **karin**: 核心服务
 - **support**: 支持服务
-- **manage**: 管理界面
 
 通过使用 Docker Compose，您可以快速地启动和管理这些服务。
-
-## 项目结构
-
-- **docker-compose.yml**: Docker Compose 配置文件。
-- **Dockerfile**: 定义如何构建每个服务的 Docker 镜像。
-- **entrypoint.sh**: 启动脚本，处理启动时的初始化任务（如插件安装）。
 
 ## 启动项目
 
@@ -130,9 +129,13 @@ docker-compose logs <service_name>
 docker-compose logs karin
 ```
 
-## 注意事项
+## 构建镜像
 
-如果你无法访问官方docker镜像仓库，你可以修改.env中的镜像SUPPORT_IMAGE为registry.cn-beijing.aliyuncs.com/alcedo/karin-support
+如果你要在本地构建镜像，可以使用以下命令：
+
+```bash
+docker build .
+```
 
 ## 贡献
 

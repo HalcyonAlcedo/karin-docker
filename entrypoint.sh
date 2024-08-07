@@ -4,10 +4,17 @@ set -e
 
 # 获取环境变量中的端口值
 PORT=${KARIN_SUPPORT_PORT}
+ENVIRONMENT=${ENVIRONMENT}
 
 if [ -z "$PORT" ]; then
   echo "KARIN_SUPPORT_PORT 环境变量未设置"
   PORT=7005
+fi
+
+if [ "$ENVIRONMENT" = "china" ]; then
+  echo "设置 pnpm 为淘宝镜像"
+  npm config set registry https://registry.npmmirror.com
+  pnpm config set registry https://registry.npmmirror.com
 fi
 
 # 配置文件路径

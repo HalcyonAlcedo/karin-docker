@@ -1,6 +1,6 @@
 services:
   karin:
-    image: ${KARIN_IMAGE}
+    image: ${KARIN_IMAGE_CN}
     restart: unless-stopped
     ports:
       - "${KARIN_PORTS_HTTP}:7000"
@@ -11,10 +11,10 @@ services:
       - ./config:/home/karin/config/config
     environment:
       - KARIN_SUPPORT_PORT=${SUPPORT_PORT}
-      - ENVIRONMENT=global
+      - ENVIRONMENT=china
   
   karin-support:
-    image: ${SUPPORT_IMAGE}
+    image: ${SUPPORT_IMAGE_CN}
     restart: unless-stopped
     ports: 
       - "${SUPPORT_PORT}:7005"
