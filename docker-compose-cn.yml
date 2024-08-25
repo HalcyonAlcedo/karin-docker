@@ -8,7 +8,9 @@ services:
       - "${KARIN_PORTS_MANAGE}:5333"
     volumes:
       - ./plugins:/home/karin/plugins
+      - ./data:/home/karin/data
       - ./config:/home/karin/config/config
+      - ./npmconfig:/home/karin/config/plugin
     environment:
       - KARIN_SUPPORT_PORT=${SUPPORT_PORT}
       - ENVIRONMENT=china

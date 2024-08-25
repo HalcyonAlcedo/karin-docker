@@ -10,6 +10,7 @@ services:
       - ./plugins:/home/karin/plugins
       - ./data:/home/karin/data
       - ./config:/home/karin/config/config
+      - ./npmconfig:/home/karin/config/plugin
     environment:
       - KARIN_SUPPORT_PORT=${SUPPORT_PORT}
       - ENVIRONMENT=global

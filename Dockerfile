@@ -1,5 +1,7 @@
 FROM node:slim
 
+RUN apt-get update && apt-get install -yq --no-install-recommends git && apt-get clean && rm -rf /var/lib/apt/lists/*
+
 WORKDIR /home/karin
 
 COPY entrypoint.sh /usr/local/bin/entrypoint.sh
