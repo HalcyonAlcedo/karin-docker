@@ -30,5 +30,5 @@ fi
 
 # 运行项目
 cd /home/karin
-yes | pnpm install -p
+pnpm install --force -p
 npx karin .

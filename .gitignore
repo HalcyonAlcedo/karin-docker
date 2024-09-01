@@ -1,6 +1,6 @@
 config/
 plugins/
+data/
 npmconfig/
-!plugins
 !plugins/karin-plugin-basic
 !plugins/karin-plugin-manage
